@@ -35,7 +35,8 @@ def bubble_sort(arr, sorting_order):
                     arr_result = []
     else:
         arr_result = -1
-
+    if (0 if all(isinstance(item, int) for item in arr) else 1):
+        arr_result = 3
     return arr_result
 
 def main():
@@ -48,7 +49,7 @@ def main():
     print(result)
 
     # Sort in descending order
-    print("Sorted array in ascending order: ")
+    print("Sorted array in descending order: ")
     result = bubble_sort(arr, SORT_DESCENDING)
     print(result)
 

@@ -28,3 +28,35 @@ def test_bubble_sort_invalid():
     result = Lab3.bubble_sort(input_arr, 3)
 
     assert (result == [])
+
+def test_more_than_10_numbers():
+    result = []
+    input_arr = [64, 34, 25, 12, 22, 11, 90, 64, 34, 25, 12, 22, 11, 90]
+
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_ASCENDING)
+
+    assert (result == -1)
+
+def test_less_than_10_numbers():
+    result = []
+    input_arr = [64, 34, 25, 12, 22, 11, 90]
+
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_ASCENDING)
+
+    assert (result != -1)
+
+def test_list_is_empty():
+    result = []
+    input_arr = []
+
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_ASCENDING)
+
+    assert (result == [])
+
+def test_not_integers():
+    result = []
+    input_arr = [64, 34, 25, 12, 22, 11, 90, 1.2]
+
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_ASCENDING)
+
+    assert (result == 3)
